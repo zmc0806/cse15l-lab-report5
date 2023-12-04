@@ -18,3 +18,31 @@ Here is my screen shoot of fail test and my code.
 
 ![image](https://raw.githubusercontent.com/zmc0806/cse15l-lab-report5/main/mycode.jpeg)
 
+TA: You can try by yourself according print the result before using this method and after using this method.
+
+Student: Thanks!The issue is my test code lies in the assertion part of the test case. In my test,I am comparing the `output` array with the `input` array using `assertArrayEquals`, but I should be comparing the `output` array with the result returned by the `reversed` method. Here's the corrected test case:
+
+```java
+import static org.junit.Assert.*;
+import org.junit.*;
+
+public class ArrayTests {
+
+  @Test
+  public void test1(){
+    int[] input = {1, 2, 3, 4, 5, 6};
+    int[] expectedOutput = {6, 5, 4, 3, 2, 1};
+    int[] actualOutput = ArrayExamples.reversed(input);
+    assertArrayEquals(expectedOutput, actualOutput);
+  }
+
+}
+```
+
+In this corrected version:
+
+- `expectedOutput` is what you expect after the array is reversed.
+- `actualOutput` is the result of calling `ArrayExamples.reversed(input)`.
+- The `assertArrayEquals` method is used to check if these two arrays are equal.
+- 
+![image](https://raw.githubusercontent.com/zmc0806/cse15l-lab-report5/main/newtest.jpeg)
