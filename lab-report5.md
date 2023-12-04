@@ -1,6 +1,6 @@
 ## Part 1 – Debugging Scenario
 
-Question 
+Student Question 
 
 ![image](https://raw.githubusercontent.com/zmc0806/cse15l-lab-report5/main/problem.jpeg)
 
