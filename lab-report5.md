@@ -67,3 +67,22 @@ javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java
 java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore
 
 ```
+
+ArrayTests.java (the bug before fixing):
+
+```
+import static org.junit.Assert.*;
+import org.junit.*;
+
+public class ArrayTests {
+  @Test
+  public void test1(){
+    int[] input = {1,2,3,4,5,6};
+    int[] output = {6,5,4,3,2,1};
+    System.out.println(ArrayExamples.reversed(input));
+    assertArrayEquals(output, input);
+  }
+
+}
+
+```
