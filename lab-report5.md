@@ -46,3 +46,24 @@ In this corrected version:
 - The `assertArrayEquals` method is used to check if these two arrays are equal.
 - 
 ![image](https://raw.githubusercontent.com/zmc0806/cse15l-lab-report5/main/newtest.jpeg)
+
+Summary:
+
+The file and directory:
+
+The directory is lab3 and in this directory it has these files:
+test.sh, ListExamples.java, ArrayTests.java
+
+lib directory - (hamcrest-core-1.3.jar and junit-4.13.2.jar)
+
+These file before fixing the bug:
+
+test.sh (JUnit test command):
+
+```
+set -e
+
+javac -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar *.java
+java -cp .:lib/hamcrest-core-1.3.jar:lib/junit-4.13.2.jar org.junit.runner.JUnitCore
+
+```
